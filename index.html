@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Management System</title>
+    <script src="https://kit.fontawesome.com/bba3432f3f.js" crossorigin="anonymous"></script>
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: bisque;
+        }
+
+        /* Nav Bar Styling */
+        .side-nav {
+            background-color: #333;  /* Dark background for nav bar */
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            height: 60px;
+        }
+
+        /* Navigation links */
+        .side-nav a {
+            display: flex;
+            align-items: center;
+            color: white;  /* White text color for visibility */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            height: 100%;  /* Full height of the nav bar */
+            line-height: 60px; /* Vertical alignment */
+        }
+
+        /* Hover effect for links */
+        .side-nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Icon margins */
+        .side-nav a i {
+            margin-right: 8px;
+        }
+
+        /* Logo image */
+        .side-nav .logo img {
+            height: 50px;
+        }
+
+        /* Active link */
+        .side-nav a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Header styling */
+        .header {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Flip Card Container */
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+            margin: 50px auto;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Front and Back of the Card */
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+
+        .flip-card-front {
+            background-color: #f9f9f9;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .flip-card-back {
+            background-color: #4CAF50;
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Course Management System</h1>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="side-nav">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Course Management System">
+        </a>
+        <a href="index.html">
+            <i class="fa-solid fa-house-user"></i> Home
+        </a>
+        <a href="registration.html">
+            <i class="fa-solid fa-comment-dots"></i> Registration
+        </a>
+        <a href="login.html">
+            <i class="fa-solid fa-user"></i> Login
+        </a>
+        <a href="contact.html">
+            <i class="fa-solid fa-comment-dots"></i> Contact Us
+        </a>
+        <a href="https://www.canva.com/design/DAF7eevwPXo/q4St7DlxjclBm1ZpL8xVeA/edit?utm_content=DAF7eevwPXo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
+            <i class="fa-solid fa-chart-pie"></i> Design
+        </a>
+    </div>
+
+    <!-- Flip Card Section -->
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h2>Course Info</h2>
+            </div>
+            <div class="flip-card-back">
+                <h3>Course Title: Web Development</h3>
+                <p>Learn HTML, CSS, JavaScript, and more in this beginner to advanced web development course.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
